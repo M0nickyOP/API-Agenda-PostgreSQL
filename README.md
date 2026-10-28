@@ -1,9 +1,9 @@
-#API Agenda de contatos
+# API Agenda de contatos
   Uma API de agenda com CRUD e banco de dados PostgreSQL
 
   _____
 
-###Instruções de instalação
+### Instruções de instalação
 ``` 
 python3 -m venv venv
 
@@ -15,13 +15,13 @@ fastapi dev
 
 ```
 
-###Pré requisitos
+### Pré requisitos
 psql (PostgreSQL) 16.15 
 
 Python 3.12.3
 
 ___
-##Rotas
+## Rotas
 | Método | Caminho | O que envio | Sucesso | Erros possíveis |
 |---|---|---|---|---|
 | POST | /contatos | nome, email, telefone  | 201 | 409 - Email já cadastrado |
