@@ -5,6 +5,10 @@
 
 ### Instruções de instalação
 ``` 
+sudo apt update
+
+sudo apt install postgresql
+
 python3 -m venv venv
 
 source venv/bin/activate
@@ -14,7 +18,17 @@ pip install -r requirements.txt
 fastapi dev
 
 ```
+### Como rodar o banco
+``` 
+// instale o banco
+sudo apt install postgresql
+// entre no modo administrador do postgresql
+sudo -u postgres psql
+// crie um usuario e senha
+CREATE USER exemplo_app WITH PASSWORD '12345';
+CREATE DATABASE exemplo OWNER exemplo_app;
 
+```
 ### Pré requisitos
 psql (PostgreSQL) 16.15 
 
@@ -31,3 +45,4 @@ ___
 | DELETE | /contatos/{id} | id  | 204 | 404 - Contato não encontrado |
 | PATCH | /contatos/{id} | nome, contato e email | 200 | 404 - Contato não encontrado, 409 - Email já cadastrado|
 ----
+
